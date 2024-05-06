@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div id="app2" v-cloak>
+            <h1>{{ fullName() }}</h1>
+            <p><a :href="url" target="_blank">itdul</a></p>
+            <h4 v-html="raw_url"> </h4>
+
+            <h4>{{typeof age}}</h4>
+            <hr />
+            <button @click="increase">Increase (+)</button>
+            <button @click="age--">Decrease (-)</button>
+
+            <label>First Name</label>
+            <input type="text" v-model="firstName">
+
+            <label>Last Name</label>
+            <input type="text" :value="lastName" @input="updateLastName">
+            <input type="number" v-model.number="age">
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="app.js"></script>
+    </body>
+
+</html>
